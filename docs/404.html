@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hosts Who Build</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      // This script redirects 404s back to index.html for SPA routing
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
+      window.location.replace('/' + (path ? '?p=' + encodeURIComponent(path) + (search ? '&q=' + encodeURIComponent(search) : '') : '') + hash);
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/" />
+    </noscript>
+  </body>
+</html>
